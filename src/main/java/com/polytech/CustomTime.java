@@ -46,7 +46,7 @@ public class CustomTime {
         if(mm < 0 || mm > 59){
             throw new IllegalArgumentException("Heure invalide");
         } else {
-            this.heures = (byte)mm;
+            this.minutes = (byte) mm;
         }
     }
 
@@ -55,5 +55,9 @@ public class CustomTime {
         this.setMinutes(mm);
     }
 
-
+    public void avancerMinutes(int mm) {
+        int totalMinutes = this.heures * 60 + this.minutes + mm;
+        this.heures = (byte) (totalMinutes / 60);
+        this.minutes = (byte) (totalMinutes % 60);
+    }
 }
