@@ -11,7 +11,7 @@ public class Main {
         try {
             CustomTime time3 = new CustomTime();
             System.out.println(time3);
-            time3.avancerMinutes(130);
+            time3.avancerMinutes(13000);
             System.out.println(time3);
         } catch (IllegalArgumentException e) {
             // Permet de ne pas arrêter le programme si une heure est invalide

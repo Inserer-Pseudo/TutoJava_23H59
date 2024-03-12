@@ -57,7 +57,9 @@ public class CustomTime {
 
     public void avancerMinutes(int mm) {
         int totalMinutes = this.heures * 60 + this.minutes + mm;
-        this.heures = (byte) (totalMinutes / 60);
-        this.minutes = (byte) (totalMinutes % 60);
+        int minutesRemappees = totalMinutes % 1440; // 1440 minutes dans un jour
+        this.heures = (byte) (minutesRemappees / 60);
+        this.minutes = (byte) (minutesRemappees % 60);
     }
+
 }
