@@ -9,11 +9,11 @@ public class Main {
         //System.out.println(time2);
 
         try {
-            CustomTime time3 = new CustomTime();
+            CustomTime time3 = new CustomTime()        ;
             System.out.println(time3);
-            time3.avancerMinutes(13000);
+            time3.avancerMinutes(-111110);
             System.out.println(time3);
-        } catch (IllegalArgumentException e) {
+        } catch (Exception e) {
             // Permet de ne pas arrêter le programme si une heure est invalide
             System.out.println(e.getMessage());
         }
