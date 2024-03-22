@@ -56,10 +56,16 @@ public class CustomTime {
     }
 
     public void avancerMinutes(int mm) {
+        int minutesRemappees;
+
         int totalMinutes = this.heures * 60 + this.minutes + mm;
-        int minutesRemappees = totalMinutes % 1440; // 1440 minutes dans un jour
+        if (totalMinutes < 0) {
+            minutesRemappees = (1440 + totalMinutes) % 1440;
+        } // 1440 minutes dans un jour
+        else {
+            minutesRemappees = totalMinutes % 1440;
+        } // 1440 minutes dans un jour
         this.heures = (byte) (minutesRemappees / 60);
         this.minutes = (byte) (minutesRemappees % 60);
     }
-
 }

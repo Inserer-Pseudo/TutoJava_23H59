@@ -100,7 +100,7 @@ class CustomTimeTest {
     @Test
     void avancerMinutesMaisCaReculeDePlusDeDeuxCentQuaranteMinutes() {
         time.setHeuresMinutes(3,56);
-        time.avancerMinutes(-242);
+        time.avancerMinutes(-241);
         assertEquals(23,time.getHeures());
         assertEquals(55, time.getMinutes());
     }

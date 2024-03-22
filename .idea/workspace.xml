@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cdc78cd-4658-4d90-a740-19f8368b1dcd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test/com/polytech/CustomTimeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/polytech/CustomTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polytech/CustomTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/polytech/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/polytech/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,7 @@
       <workItem from="1710768782227" duration="5000" />
       <workItem from="1710768918040" duration="6000" />
       <workItem from="1710770220755" duration="3000" />
-      <workItem from="1711101023167" duration="3594000" />
+      <workItem from="1711101023167" duration="4329000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
