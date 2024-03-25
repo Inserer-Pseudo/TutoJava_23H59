@@ -112,4 +112,14 @@ class CustomTimeTest {
         assertEquals(3,time.getHeures());
         assertEquals(55, time.getMinutes());
     }
+
+    @Test
+    void testLeveeException() {
+        assertThrows(IllegalArgumentException.class, () -> time.setHeures(-2));
+        assertThrows(IllegalArgumentException.class, () -> time.setHeures(25));
+        assertThrows(IllegalArgumentException.class, () -> time.setMinutes(-2));
+        assertThrows(IllegalArgumentException.class, () -> time.setMinutes(61));
+        assertThrows(IllegalArgumentException.class, () -> time.setHeuresMinutes(-2, 25));
+        assertThrows(IllegalArgumentException.class, () -> time.setHeuresMinutes(25, 61));
+    }
 }
