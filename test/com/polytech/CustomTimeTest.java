@@ -2,6 +2,7 @@ package com.polytech;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +14,7 @@ class CustomTimeTest {
         time = new CustomTime(8,14);
     }
 
-    @Test
+    @Test @DisplayName("Test de setter simple")
     void setHeures() {
         time.setHeures(13);
         assertEquals(13, time.getHeures());
@@ -112,6 +113,15 @@ class CustomTimeTest {
         assertEquals(3,time.getHeures());
         assertEquals(55, time.getMinutes());
     }
+
+        @ParameterizedTest
+        @ValueSource(ints = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23})
+        void testParametriqueAvancerMinutes(int hh) {
+            time.setHeuresMinutes(hh, 0);
+            time.avancerMinutes(60);
+            assertEquals((hh + 1) % 24, time.getHeures());
+            assertEquals(0, time.getMinutes());
+        }
 
     @Test
     void testLeveeException() {
